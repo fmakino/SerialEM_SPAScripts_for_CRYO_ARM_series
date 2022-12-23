@@ -1,7 +1,7 @@
 # SerialEM SPA scritps for CRYO ARM series
 
 ## 前置き  
-このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集です。他の装置で動作するかどうかわかりません。  
+このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集用です。他の装置で動作するかどうかわかりません。  
 このスクリプトをインストールしたい場合は以下の手順を試してみてください。もし、わからない場合は日本電子のアプリケーションエンジニアか私に相談してみてください。  
 
 ### 日本電子の装置を使用した単粒子解析の考え方  
@@ -102,19 +102,33 @@ How to do：TakeSquare後にマップからターゲットを選びadd pointsお
   
 **4.FindVectorsRoutine**  
 動作確認のみ。穴がはっきりと視認できるポジションに移動すること。  
-parameters: using_ZbyV =1(ケラーの場合は0がおすすめ)  
-doAll=0 (1なら高さ合わせ、holealignment, FindInitVectorすべて行う)  
-
+parameters: 
+skip_focusing = 0 # 0: No, 1:Yes  
+skip_holeAlign = 0 # 0: No, 1:Yes  
+skip_InitVec = 1 # 0: No, 1:Yes  
+skip_checkAccuracy = 0 # 0: No, 1:Yes  
+using_ZbyV =1 (ケラーの場合はデフォルトで0がおすすめ)  
+で走らせて様子を見る。難波研の場合はスクリーニング後が多いので以下のパラメータが多い。  
+skip_focusing = 0 # 0: No, 1:Yes  
+skip_holeAlign = 1 # 0: No, 1:Yes  
+skip_InitVec = 1 # 0: No, 1:Yes  
+skip_checkAccuracy = 1 # 0: No, 1:Yes  
+using_ZbyV =n0 (ケラーの場合はデフォルトで0がおすすめ)    
+  
 **5.AligncomaAndStig**  
 動作確認のみ。  
 settle_time = 10 sec  
 exp_time = 1(氷の厚さなどによる)  
+もし、うまく動かない場合：高さ調整かAutoFocusがうまく行ってない場合が多い。どちらも、AutoFocusのキャリブレーションで直る場合が多い。
 
 **6. ZLPalignByFL**  
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
 parameters: search_range = 40 がオススメ  
-  
-**¥7. SPADataCollection**  
+もし、うまく動かない場合は'WORKING_DIR_PATH¥Tool'にshift_FL_client.bat/py, shift_FL_server.bat/pyがコピーされていること、また、最新のものであるか確認してください。
+
+
+
+**7. SPADataCollection**  
 parameter: LAYERなどスクリプトparametersで決定する  
 byOLとbyZで確認  
 ＊頻繁に変えるものは最初の行に記載してある。  
