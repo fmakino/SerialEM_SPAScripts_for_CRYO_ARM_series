@@ -5,7 +5,7 @@
 このスクリプトをインストールしたい場合は以下の手順を試してみてください。もし、わからない場合は日本電子のアプリケーションエンジニアか私に相談してみてください。
 
 ### 日本電子の装置を使用した単粒子解析の考え方
-・日本電子の装置ではステージの精度がそれほど高くありません。そのため、SerialEM従来のやり方では正確に場所をアライメントするために色々な工夫、もしくはアライメントを正確に行うための時間が必要になってしまいます。そこで、正確性を少し犠牲にして速さを追求したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に＋30-60分が目標です。大まかな流れをだけをここに示します。
+・日本電子の装置ではステージの精度がそれほど高くありません。そのため、SerialEM従来のやり方では正確に場所をアライメントするために色々な工夫、もしくはアライメントを正確に行うための時間が必要になってしまいます。そこで、正確性を少し犠牲にして速さを追求したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れをだけをここに示します。
 
 また、スクリーニングとデータ収集を行っている様子のvideoを用意します。
 詳しいマニュアルは筑波大学の岩崎ラボ、KEK安達のリンクを参照にして下さい。
@@ -16,16 +16,16 @@
 
 ・Focus/Tuneメニュー  Drift Protection にチェックが入っていること
 
-・PyJEMプログラム群のSetCLaperture.bat/py, SetOLaperture.bat/py, shift_FL_client.bat/py, shift_FL_server.bat/pyをスクリプト40: EMproperties内に書いてあるWORKING_DIR_PATH のフォルダに(DefaultはC:\ProgramData\SerialEM)に入れること
+・PyJEMプログラム群のSetCLaperture.bat/py, SetOLaperture.bat/py, shift_FL_client.bat/py, shift_FL_server.bat/pyをスクリプト40: EMproperties内に書いてあるWORKING_DIR_PATH のフォルダ+Tool(DefaultのWORKING_DIR_PATHはC:\ProgramData\SerialEM, つまりC:\ProgramData\SerialEM\Tool)に入れること
 
 ・上で入れたPyJEMプログラムは単体(batファイル)で動くか確認すること(minicondaをactivateするかどうかなど、環境次第なのでこれはアプリケーション技術員が対応)
 確認方法：それぞれのプログラムをコマンドプロンプト上で単体で動かしてチェックする。まず、cmdコンソールを開き、WORKING_DIR_PATHのフォルダを開いて、cmdコンソールにドラッグ・アンド・ドロップする。引数は以下を参考にする。
 →もしくはフォルダを開いた後Shift+右クリックでOpen command window hereを選択する。
 例)SetCLAperture.batの場合： SetCLaperture.bat 0 1 
  1番のCL apertureがセットされる。(引数1は0で1段目のアパチャ、1で2段目のアパチャ、引数2は1-4番目のアパチャのset)
-例)SetOLAperture.batの場合： SetOLaperture.bat 1　(2 1 osaka )
+例)SetOLAperture.batの場合： SetOLaperture.bat 2 1　
  1番のOL apertureがセットされる。(引数は0でアパチャの取り出し、1-4でそれに相当するアパチャのset)
-→プログラムは動くが、いずれの引数でもlistにないというエラーが出る
+→プログラムは動くが、いずれの引数でもlistにないというエラーが出る場合は引数を確認。
 shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignByFLで確認できる（後述）
 
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc
