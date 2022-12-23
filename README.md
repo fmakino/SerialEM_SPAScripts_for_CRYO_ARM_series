@@ -37,17 +37,17 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
   
 ### EMProperties の値を確認および入力  
 　もし以前同様のスクリプトを使用していた場合は下記の値をそちらから値をコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  
-<JEOL TEM type>  
+__JEOL TEM type__ 
 ・CLapt_type = 1 : # 0: CryoARM200, CryoARM200CA, CryoARM300II, F200  
                  # 1: 2nd CL aperture board, CryoARM300  
 ・ARM300：CRYO ARM 300(Z300)の場合は1にする  
 
-<Stage setting>  
+__Stage setting__
 ・safty_z_lower = -210 #[um], safty_z_upper = 205 #[um] :zの限界値  
 ・eucentric_height = 0 # [um] ：0がデフォルト  
 ・koehler_z_offset = -140 # [um] ：0がデフォルト、ケラー使う場合は-120程度入れるとよい。その場合はTakeSquare時にadjust_eucentric = 1にしないとケラーの高さにいかない。  
   
-<Setting for Atlas>  
+__Setting for Atlas__ 
 ・default_spot_atlas: Atlas map作成時のspotサイズ  
 ・mag_atlas: Atlas map作成時の倍率(CRYO ARM 300なら50,  CRYO ARM 200なら30)  
 ・brightness_atlas: 100%が多く使われる。  
@@ -60,7 +60,7 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
         atlas2square_y = 116.5 # [um]  
 : AtlasからSquareに移行したときのshift to markerの値、もしアップデートしたい場合はそれらの値に足し算して記述すること  
 
-<Settingfor Square>  
+__Settingfor Square__ 
 ・default_SquareMag = 150：squaremapを取得するときの倍率  
 ・spot_square = 4：squaremapを取得するときのspot size  
 ・brightness_square = 100：100%が多く使われる。ただしenergy filterを入れる場合はその限りではなく、ちょうどよい明るさが存在する。FL focusと合わせて調整するとよい。  
@@ -69,10 +69,10 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
         square2view_y = 30 # [um]    
 : SquareからViewに移行したときのshift to markerの値、もしアップデートしたい場合はそれらの値に足し算して記述すること  
 
-<Python Call setting>  
+__Python Call setting__  
 各プログラムの場所を確認  
   
-<YoneoLocker>  
+__YoneoLocker__
 ・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main：Hole alignにyoneoLocrを使用する場合のプログラムの場所。  
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
@@ -94,7 +94,7 @@ How to do：TakeAtlas後にマップからターゲットを選びadd pointsお�
 ** 2. TakeSquare  **
 parameter: Clapt_before, Clapt_afterの値などをチェック(300はopen, 3300/200は1(150um)がおすすめ)  
 はじめは、shift_squre2view=0としgoto_LowDose=1として、Squareとview間の両倍率のFOVをあわせてどれ程度ずれたかを確認する。この値をproperties(square2view_x, square2view _y)に入れる。shift_squre2view=1とすると次回以降この値が適用されSquareとview間の両倍率の移動が楽になる。  
-How to do：TakeSquare後にマップからターゲットを選びadd pointsおよびgoto xyでステージ移動する。その後viewの倍率に行き(Low Dose Controlをチェック)、ターゲットをその倍率で真ん中に来るようにステージ移動し撮影する。ターゲットをクリックしたあとにshift to makerで両倍率のFOVをあわせてどれ程度ずれたかを確認する。pop upで出てきたこの値をproperties(square2view_x, square2view_y)に入れるとよい。  
+How to do：TakeSquare後にマップからターゲットを選びadd pointsおよびgoto xyでステージ移動する。その後viewの倍率に行き(Low Dose Controlをチェック)、ターゲットをその倍率で真ん中に来るようにステージ移動し撮影する。ターゲットをクリックしたあとにshift to makerで両倍率のFOVをあわせてどれ程度ずれたかを確認する。pop upで出てきたこの値をproperties(square2view_x, square2view_y)に入れるとよい。    
 
 
 ** 3. SPADataCollection_Screening **
