@@ -24,21 +24,21 @@
 例)SetCLAperture.batの場合： SetCLaperture.bat 0 1   
  1番のCL apertureがセットされる。(引数1は0で1段目のアパチャ、1で2段目のアパチャ、引数2は1-4番目のアパチャのset)  
 例)SetOLAperture.batの場合： SetOLaperture.bat 2 1　  
- 1番のOL apertureがセットされる。(引数は0でアパチャの取り出し、1-4でそれに相当するアパチャのset)  
+ 1番のOL apertureがセットされる。(引数1は上と同じ。引数2は0でアパチャの取り出し、1-4でそれに相当するアパチャのset)  
 →プログラムは動くが、いずれの引数でもlistにないというエラーが出る場合は引数を確認。  
 shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignByFLで確認できる（後述）  
 
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
-に事前にコピーしておくこと  
+に事前にコピーしておくこと。  
 
 ## 新しいスクリプトのインストール方法  
 新しいスクリプトをダウンロード後、任意の場所にコピー(例：C:¥ProgramData¥SerialEM¥)  
 メニューscript  Load new packageから先程コピーしたスクリプトをロードする。  
   
 ### EMProperties の値を確認および入力    
-　もし以前同様のスクリプトを使用していた場合は下記の値をそちらから値をコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  
+　もし以前同様のスクリプトを使用していた場合は下記の値をそちらから値をコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  ここでは難波研究室CRYO ARM 300Ⅱでの使用例をのせる。
 __JEOL TEM type__   
-・CLapt_type = 1 : # 0: CryoARM200, CryoARM200CA, CryoARM300II, F200  
+・CLapt_type = ０ : # 0: CryoARM200, CryoARM200CA, CryoARM300II, F200  
                  # 1: 2nd CL aperture board, CryoARM300  
 ・ARM300：CRYO ARM 300(Z300)の場合は1にする  
 
