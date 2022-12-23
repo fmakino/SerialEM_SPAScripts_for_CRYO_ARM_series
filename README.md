@@ -1,4 +1,4 @@
-# SPAscripts-using-SerialEM-for-CRYOARMseries
+# SerialEM SPA scritps for CRYO ARM series
 
 ## 前置き
 このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集です。他の装置で動作するかどうかわかりません。
