@@ -10,6 +10,9 @@
 また、スクリーニングとデータ収集を行っている様子のvideoを用意します。  
 詳しいマニュアルは筑波大学の岩崎ラボ、KEK安達のリンクを参照にして下さい。  
 
+大阪大学大学院生命機能研究科で使用しているスクリプト
+[CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)
+[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)
 
 ## 事前準備、用意しておくこと
 ・SerialEMのキャリブレーションとインストール(ver4以上)が完了していること  
