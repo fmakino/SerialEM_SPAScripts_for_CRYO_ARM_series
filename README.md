@@ -8,7 +8,7 @@
 ・日本電子の装置ではステージの精度がそれほど高くありません。そのため、SerialEM従来のやり方では正確に場所をアライメントするために色々な工夫、もしくはアライメントを正確に行うための時間が必要になってしまいます。そこで、正確性を少し犠牲にして速さを追求したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れをだけをここに示します。  
   
 また、スクリーニングとデータ収集を行っている様子のvideoを用意します。  
-詳しいマニュアルはこちらの[リンク](https://zulip-uploads.s3.amazonaws.com/45779/IcERn-WG_YbP2TgfRgGGEMAB/221116-cryoARM300II_SPA%E5%88%9D%E6%9C%9F%E3%83%88%E3%83%AC%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88_v1_22.pdf?AWSAccessKeyId=AKIAIEVMBCAT2WD3M5KQ&Signature=lWd8%2FvQUoMuvZ3cQk5jGdZa9EG4%3D&Expires=1671867081)を参照にして下さい（バージョンや名前が合わない場合がありますがご了承ください。）。  
+詳しいマニュアルはこちらの[リンク](https://zulip-uploads.s3.amazonaws.com/45779/IcERn-WG_YbP2TgfRgGGEMAB/221116-cryoARM300II_SPA%E5%88%9D%E6%9C%9F%E3%83%88%E3%83%AC%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88_v1_22.pdf?AWSAccessKeyId=AKIAIEVMBCAT2WD3M5KQ&Signature=lWd8%2FvQUoMuvZ3cQk5jGdZa9EG4%3D&Expires=1671867081)を参照にして下さい（バージョンや名前が合わない場合がありますがご了承ください）。  
 
 
 
