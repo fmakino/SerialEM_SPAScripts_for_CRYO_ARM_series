@@ -35,7 +35,7 @@
  1番のCL apertureがセットされる。(引数1は0で1段目のアパチャ、1で2段目のアパチャ、引数2は1-4番目のアパチャのset)  
 例)SetOLAperture.batの場合： SetOLaperture.bat 2 1　  
  1番のOL apertureがセットされる。(引数1は上と同じ。引数2は0でアパチャの取り出し、1-4でそれに相当するアパチャのset)  
-→プログラムは動くが、いずれの引数でもlistにないというエラーが出る場合は引数を確認。  
+→プログラムは動くが、いずれの引数でもlistにないというエラーが出る場合は引数を確認。  それでも駄目な場合は連絡下さい。
 shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignByFLで確認できる（後述）  
 
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
