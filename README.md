@@ -26,6 +26,8 @@
   
 ・PyJEMプログラム群のSetCLaperture.bat/py, SetOLaperture.bat/py, shift_FL_client.bat/py, shift_FL_server.bat/pyをスクリプト40: EMproperties内に書いてある  WORKING_DIR_PATH のフォルダ+Tool(DefaultのWORKING_DIR_PATHはC:\ProgramData\SerialEM, つまりC:\ProgramData\SerialEM\Tool)に入れること  
 
+・上記のPyJEMプログラム群の入手とPyJEMのインストールについては近くの日本電子のエンジニア等にご相談下さい。
+
 ・上で入れたPyJEMプログラムは単体(batファイル)で動くか確認すること(minicondaをactivateするかどうかなど、環境次第なのでこれはアプリケーション技術員が対応)  
 確認方法：それぞれのプログラムをコマンドプロンプト上で単体で動かしてチェックする。まず、cmdコンソールを開き、WORKING_DIR_PATHのフォルダを開いて、cmdコンソールにドラッグ・アンド・ドロップする。引数は以下を参考にする。  
 →もしくはフォルダを開いた後Shift+右クリックでOpen command window hereを選択する。  
@@ -38,7 +40,7 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
 
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
 に事前にコピーしておくこと。  
-・上記のPyJEMプログラム群の入手とPyJEMのインストールについては近くの日本電子のエンジニア等にご相談下さい。
+
 
 ## 新しいスクリプトのインストール方法  
 新しいスクリプトをダウンロード後、任意の場所にコピー(例：C:¥ProgramData¥SerialEM¥)  
