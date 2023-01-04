@@ -130,7 +130,9 @@ skip_holeAlign = 1 # 0: No, 1:Yes
 skip_InitVec = 1 # 0: No, 1:Yes  
 skip_checkAccuracy = 1 # 0: No, 1:Yes  
 using_ZbyV =n0 (ケラーの場合はデフォルトで0がおすすめ)    
-  
+[説明動画](https://youtu.be/p5eJ8c1EzUM)  
+
+
 **5.AligncomaAndStig**  
 動作確認のみ。  
 settle_time = 10 sec  
