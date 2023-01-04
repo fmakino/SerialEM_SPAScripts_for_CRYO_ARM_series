@@ -12,7 +12,7 @@
 
 また、スクリーニングとデータ収集を行っている様子のvideoを用意します。  
 詳しいマニュアルはこちらの[リンク](https://www2.kek.jp/imss/sbrc/beamline/cryoem/221225_TsukubaCRYOARM300II_TrainingText_v1.pdf)を参照にして下さい（バージョンや名前が合わない場合がありますがご了承ください）。  
-簡単なマニュアルは[こちら]()です。
+簡単なマニュアル[スクリーニング](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)と[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)です。
 
 
 大阪大学大学院生命機能研究科で使用しているスクリプト  
