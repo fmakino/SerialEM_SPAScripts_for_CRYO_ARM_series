@@ -10,7 +10,7 @@
 
 ここで注意が必要なのは一度Magに移行してからはなるべくLowMagに行かないようにすることです。どうしても必要な場合は再度ビームのアライメント調整が必要です。　　
 
-また、スクリーニングとデータ収集を行っている様子のvideoを用意します。  
+また、それぞれの作業を説明した動画を各項目でリンクしています。また、スクリーニングとデータ収集を行っている様子のvideoを用意します(未実装)。  
 詳しいマニュアルはこちらの[筑波⼤クライオ電顕・単粒⼦解析⽤測定マニュアル](https://www2.kek.jp/imss/sbrc/beamline/cryoem/221225_TsukubaCRYOARM300II_TrainingText_v1.pdf)を参照して下さい（筑波大学 安達先生ありがとうございます。バージョンや名前が合わない場合がありますがご了承ください）。  
 ワークフローを確認できる簡単マニュアルはこちらのリンクです([スクリーニング](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)、[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf))
 
