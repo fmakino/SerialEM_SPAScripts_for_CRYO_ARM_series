@@ -85,8 +85,9 @@ __Settingfor Square__
 __Python Call setting__   
 各プログラムの場所を確認  
   
-__YoneoLocker__  
+__YoneoLocr__  
 ・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main：Hole alignにyoneoLocrを使用する場合のプログラムの場所。  
+＊事前にYneoLocrのインストールなどが必要です。これについてはYoneoLockerの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
   
