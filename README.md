@@ -23,11 +23,11 @@
 ・SerialEMのキャリブレーションとインストール(ver4以上)が完了していること  
   
 ・Focus/Tuneメニュー  Drift Protection にチェックが入っていること  
-  
+    
 ・PyJEMプログラム群のSetCLaperture.bat/py, SetOLaperture.bat/py, shift_FL_client.bat/py, shift_FL_server.bat/pyをスクリプト40: EMproperties内に書いてある  WORKING_DIR_PATH のフォルダ+Tool(DefaultのWORKING_DIR_PATHはC:\ProgramData\SerialEM, つまりC:\ProgramData\SerialEM\Tool)に入れること  
-
+  
 ・上記のPyJEMプログラム群の入手とPyJEMのインストールについては近くの日本電子のエンジニア等にご相談下さい。
-
+  
 ・上で入れたPyJEMプログラムは単体(batファイル)で動くか確認すること(minicondaをactivateするかどうかなど、環境次第なのでこれはアプリケーション技術員が対応)  
 確認方法：それぞれのプログラムをコマンドプロンプト上で単体で動かしてチェックする。まず、cmdコンソールを開き、WORKING_DIR_PATHのフォルダを開いて、cmdコンソールにドラッグ・アンド・ドロップする。引数は以下を参考にする。  
 →もしくはフォルダを開いた後Shift+右クリックでOpen command window hereを選択する。  
@@ -37,13 +37,13 @@
  1番のOL apertureがセットされる。(引数1は上と同じ。引数2は0でアパチャの取り出し、1-4でそれに相当するアパチャのset)  
 →プログラムは動くが、いずれの引数でもlistにないというエラーが出る場合は引数を確認。  それでも駄目な場合は連絡下さい。
 shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignByFLで確認できる（後述）  
-[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
-[説明動画：PyJEM関連とhole templateについて](https://youtu.be/PwmvMNkzVo4)  
-
+  
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
 に事前にコピーしておくこと。  
 
-
+[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
+[説明動画：PyJEM関連とhole templateについて](https://youtu.be/PwmvMNkzVo4)  
+  
 ## 新しいスクリプトのインストール方法  
 新しいスクリプトをダウンロード後、任意の場所にコピー(例：C:¥ProgramData¥SerialEM¥)  
 メニューscript  Load new packageから先程コピーしたスクリプトをロードする。  
