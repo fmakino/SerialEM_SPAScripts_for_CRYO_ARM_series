@@ -135,8 +135,9 @@ using_ZbyV =n0 (ケラーの場合はデフォルトで0がおすすめ)
 動作確認のみ。  
 settle_time = 10 sec  
 exp_time = 1(氷の厚さなどによる)  
-もし、うまく動かない場合：高さ調整かAutoFocusがうまく行ってない場合が多い。どちらも、AutoFocusのキャリブレーションで直る場合が多い。
-
+もし、うまく動かない場合：高さ調整かAutoFocusがうまく行ってない場合が多い。どちらも、AutoFocusのキャリブレーションで直る場合が多い。  
+[説明動画](https://youtu.be/be8YbSjC8J4)  
+  
 **6. ZLPalignByFL**  
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
 parameters: search_range = 40 がオススメ  
