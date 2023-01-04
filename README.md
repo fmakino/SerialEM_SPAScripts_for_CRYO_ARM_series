@@ -115,6 +115,7 @@ How to do：TakeSquare後にマップからターゲットを選びadd pointsお
 動作確認のみ。  
 スクリプトAutoFocusRoutine を確実に動かすためにFocusメニュー”target defocus” で-1.4~-2.0にsetすることを忘れずにすること。  
 スクリプトAlignToHoleを動かす際にYoneoHole (Yonekura et al. 2021)を使用する場合にはuse_YL = 1にすること。このとき、YoneoHoleを起動することを忘れずに行うこととaligntohole内のuse_YLの方が優先されるので注意が必要。  
+[説明動画](https://youtu.be/VLQfcRfwaqk)  
   
 **4.FindVectorsRoutine**  
 動作確認のみ。穴がはっきりと視認できるポジションに移動すること。  
@@ -144,13 +145,14 @@ exp_time = 1(氷の厚さなどによる)
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
 parameters: search_range = 40 がオススメ  
 もし、うまく動かない場合は'WORKING_DIR_PATH¥Tool'にshift_FL_client.bat/py, shift_FL_server.bat/pyがコピーされていること、また、最新のものであるか確認してください。
-
+[説明動画](https://youtu.be/9jEgw5Tsib0)
 
 
 **7. SPADataCollection**  
 parameter: LAYERなどスクリプトparametersで決定する  
 byOLとbyZで確認  
 ＊頻繁に変えるものは最初の行に記載してある。  
+
     
 LogImage setting, save_Rは0にすること。これを入れないと取得スピードが遅くなる。  
 
