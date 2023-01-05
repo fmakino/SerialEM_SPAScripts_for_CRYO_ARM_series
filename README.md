@@ -96,9 +96,9 @@ __YoneoLocr__
   
 
 ### スクリプトについての注意点  
-＊EMPropertiesの値は普段変更を加えないもの(FOV offset from Atlas to Square, FOV offset From Square to Viewは１週間に一度程度の変更)。  
-＊スクリプト内のparameterはグリッドや条件によって変更しやすいもの  
-
+＊EMPropertiesの値は普段変更を加えない(FOV offset from Atlas to Square, FOV offset From Square to Viewは１週間に一度程度の変更)。    
+＊スクリプト内のparameterはグリッドや条件によって変更しやすい  
+  
   
 ### 確認すべきスクリプト  
 **1. TakeAtlas**   
