@@ -132,7 +132,7 @@ skip_focusing = 0 # 0: No, 1:Yes
 skip_holeAlign = 1 # 0: No, 1:Yes  
 skip_InitVec = 1 # 0: No, 1:Yes  
 skip_checkAccuracy = 1 # 0: No, 1:Yes  
-using_ZbyV =n0 (ケラーの場合はデフォルトで0がおすすめ)    
+using_ZbyV = 0 (ケラーの場合はデフォルトで0がおすすめ)    
 [説明動画](https://youtu.be/p5eJ8c1EzUM)  
 
 
