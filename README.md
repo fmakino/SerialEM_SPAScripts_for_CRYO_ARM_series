@@ -6,7 +6,7 @@
 
 ### 日本電子の装置を使用した単粒子解析のデータ収集(SPAデータ収集)の考え方  
 ・日本電子の装置はステージの精度がそれほど高くありません。そのため、SerialEM従来のやり方では正確に場所をアライメントするために色々な工夫、もしくはアライメントを正確に行うための時間が必要になってしまいます。また、LowMagからMagに移行した際のヒステリシスも大きいので頻繁な行き来はお勧めできないのも理由の一つです。
-そこで、正確性を少し犠牲にして速さを追求し、ヒステリシスを考慮したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れをだけをここに示します。  
+そこで、正確性を少し犠牲にして速さを追求し、ヒステリシスを考慮したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れだけをここに示します。  
 
 ここで注意が必要なのは一度Magに移行してからはなるべくLowMagに行かないようにすることです。どうしても必要な場合は再度ビームのアライメント調整が必要です。　　
 
@@ -47,10 +47,11 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
   
 ## 新しいスクリプトのインストール方法  
 新しいスクリプトをダウンロード後、任意の場所にコピー(例：C:¥ProgramData¥SerialEM¥)  
-メニューscript  Load new packageから先程コピーしたスクリプトをロードする。  
+SerialEM上部のメニューscript --> Load new packageから先程コピーしたスクリプトをロードする。  
   
 ### EMProperties の値を確認および入力    
-　もし以前同様のスクリプトを使用していた場合は下記の値をそちらから値をコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  ここでは難波研究室CRYO ARM 300Ⅱでの使用例をのせる。
+　もし以前同様のスクリプトを使用していた場合は下記の値をそちらから値をコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  ここでは難波研究室CRYO ARM 300Ⅱでの使用例をのせる。  
+   
 __JEOL TEM type__   
 ・CLapt_type = ０ : # 0: CryoARM200, CryoARM200CA, CryoARM300II, F200  
                  # 1: 2nd CL aperture board, CryoARM300  
@@ -59,7 +60,7 @@ __JEOL TEM type__
 __Stage setting__  
 ・safty_z_lower = -210 #[um], safty_z_upper = 205 #[um] :zの限界値  
 ・eucentric_height = 0 # [um] ：0がデフォルト  
-・koehler_z_offset = -140 # [um] ：0がデフォルト、ケラー使う場合は-120程度入れるとよい。その場合はTakeSquare時にadjust_eucentric = 1にしないとケラーの高さにいかない。  
+・koehler_z_offset = -140 # [um] ：0がデフォルト、ケラーモード使う場合は-120程度入れるとよい。その場合はTakeSquare時にadjust_eucentric = 1にしないとケラーの高さにいかない。  
   
 __Setting for Atlas__  
 ・default_spot_atlas: Atlas map作成時のspotサイズ  
@@ -74,7 +75,7 @@ __Setting for Atlas__
         atlas2square_y = 116.5 # [um]  
 : AtlasからSquareに移行したときのshift to markerの値、もしアップデートしたい場合はそれらの値に足し算して記述すること  
 
-__Settingfor Square__  
+__Setting for Square__  
 ・default_SquareMag = 150：squaremapを取得するときの倍率  
 ・spot_square = 4：squaremapを取得するときのspot size  
 ・brightness_square = 100：100%が多く使われる。ただしenergy filterを入れる場合はその限りではなく、ちょうどよい明るさが存在する。FL focusと合わせて調整するとよい。  
@@ -87,8 +88,8 @@ __Python Call setting__
 各プログラムの場所を確認  
   
 __YoneoLocr__  
-・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main ： Hole alignにyoneoLocrを使用する場合はこの変数progdirにプログラムが参照する場所として指定する。  
-＊事前にYneoLocrのインストールなどが必要です。これについてはYoneoLocrの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
+・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main ： Hole alignにYoneoLocrを使用する場合はこの変数progdirにプログラムが参照する場所として指定する。  
+＊事前にYoneoLocrのインストールなどが必要です。これについてはYoneoLocrの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
 [説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
@@ -116,7 +117,7 @@ How to do：TakeSquare後にマップからターゲットを選びadd pointsお
 **3. SPADataCollection_Screening**  
 動作確認のみ。  
 スクリプトAutoFocusRoutine を確実に動かすためにFocusメニュー”target defocus” で-1.4~-2.0にsetすることを忘れずにすること。  
-スクリプトAlignToHoleを動かす際にYoneoHole ([Yonekura et al. 2021](https://www.nature.com/articles/s42003-021-02577-1)　[入手先](https://github.com/YonekuraLab/yoneoLocr))を使用する場合にはuse_YL = 1にすること。このとき、YoneoHoleを起動することを忘れずに行うこととaligntohole内のuse_YLの方が優先されるので注意が必要。  
+スクリプトAlignToHoleを動かす際にYoneoLocrのYoneoHole ([Yonekura et al. 2021](https://www.nature.com/articles/s42003-021-02577-1)　[入手先](https://github.com/YonekuraLab/yoneoLocr))を使用する場合にはuse_YL = 1にすること。このとき、YoneoHoleを起動することを忘れずに行うこととaligntohole内のuse_YLの方が優先されるので注意が必要。  
 [説明動画](https://youtu.be/VLQfcRfwaqk)  
   
 **4.FindVectorsRoutine**  
