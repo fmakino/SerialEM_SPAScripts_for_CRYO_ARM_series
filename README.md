@@ -1,7 +1,7 @@
 # SerialEM SPA scritps for CRYO ARM series
 
 ## 前置き  
-このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集用です。他の装置で動作するかどうかわかりません。  
+このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集用です。他の装置(F200やTFS社製)での動作は保証できません。  
 このスクリプトをインストールしたい場合は以下の手順を試してみてください。もし、わからない場合は日本電子のアプリケーションエンジニアか大阪大学大学院生命機能研究科 難波研究室 牧野(h1839[at]fbs.osaka-u.ac.jp)に相談してみてください。  
 
 ### 日本電子の装置を使用した単粒子解析の考え方  
@@ -11,13 +11,15 @@
 ここで注意が必要なのは一度Magに移行してからはなるべくLowMagに行かないようにすることです。どうしても必要な場合は再度ビームのアライメント調整が必要です。　　
 
 また、それぞれの作業を説明した動画を各項目でリンクしています。また、スクリーニングとデータ収集を行っている様子のvideoを用意します(未実装)。  
-詳しいマニュアルはこちらの[筑波⼤クライオ電顕・単粒⼦解析⽤測定マニュアル](https://www2.kek.jp/imss/sbrc/beamline/cryoem/221225_TsukubaCRYOARM300II_TrainingText_v1.pdf)を参照して下さい（筑波大学 安達先生ありがとうございます。バージョンや名前が合わない場合がありますがご了承ください）。  
-ワークフローを確認できる簡単マニュアルはこちらのリンクです([スクリーニング](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)、[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf))
+詳しいマニュアルはこちらの[筑波⼤クライオ電顕・単粒⼦解析⽤測定マニュアル](https://www2.kek.jp/imss/sbrc/beamline/cryoem/221225_TsukubaCRYOARM300II_TrainingText_v1.pdf)を参照して下さい（筑波大学 安達先生ありがとうございます。本スクリプトとバージョンや名前が合わない場合がありますがご了承ください）。  
+ワークフローを確認できる簡単マニュアルはこちらのリンクです
+[スクリーニング](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)  
+[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf))  
 
 
 大阪大学大学院生命機能研究科で使用しているスクリプト  
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
-[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt) 上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
+[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)   上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
 
 ## 事前準備、用意しておくこと
 ・SerialEMのキャリブレーションとインストール(ver4以上)が完了していること  
