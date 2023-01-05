@@ -14,7 +14,7 @@
 詳しいマニュアルはこちらの[筑波⼤クライオ電顕・単粒⼦解析⽤測定マニュアル](https://www2.kek.jp/imss/sbrc/beamline/cryoem/221225_TsukubaCRYOARM300II_TrainingText_v1.pdf)を参照して下さい（筑波大学 安達先生ありがとうございます。本スクリプトとバージョンや名前が合わない場合がありますがご了承ください）。  
 ワークフローを確認できる簡単マニュアルはこちらのリンクです
 [スクリーニング](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)  
-[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf))  
+[データ収集](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ScreeningProcedure_v4_JP.pdf)  
 
 
 大阪大学大学院生命機能研究科で使用しているスクリプト  
