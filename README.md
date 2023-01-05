@@ -88,7 +88,7 @@ __Python Call setting__
   
 __YoneoLocr__  
 ・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main ： Hole alignにyoneoLocrを使用する場合はこの変数progdirにプログラムが参照する場所として指定する。  
-＊事前にYneoLocrのインストールなどが必要です。これについてはYoneoLockerの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
+＊事前にYneoLocrのインストールなどが必要です。これについてはYoneoLocrの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
 [説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
