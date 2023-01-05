@@ -31,7 +31,7 @@
 ・上記のPyJEMプログラム群の入手とPyJEMのインストールについては近くの日本電子のエンジニア等にご相談下さい。
   
 ・上で入れたPyJEMプログラムは単体(batファイル)で動くか確認すること(minicondaをactivateするかどうかなど、環境次第なのでこれはアプリケーション技術員が対応)  
-確認方法：それぞれのプログラムをコマンドプロンプト上で単体で動かしてチェックする。まず、cmdコンソールを開き、WORKING_DIR_PATHのフォルダを開いて、cmdコンソールにドラッグ・アンド・ドロップする。引数は以下を参考にする。  
+**確認方法**：それぞれのプログラムをコマンドプロンプト上で単体で動かしてチェックする。まず、cmdコンソールを開き、WORKING_DIR_PATHのフォルダを開いて、cmdコンソールにドラッグ・アンド・ドロップする。引数は以下を参考にする。  
 →もしくはフォルダを開いた後Shift+右クリックでOpen command window hereを選択する。  
 例)SetCLAperture.batの場合： SetCLaperture.bat 0 1   
  1番のCL apertureがセットされる。(引数1は0で1段目のアパチャ、1で2段目のアパチャ、引数2は1-4番目のアパチャのset)  
@@ -42,8 +42,7 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
   
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
 に事前にコピーしておくこと。  
-
-[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
+  
 [説明動画：PyJEM関連とhole templateについて](https://youtu.be/PwmvMNkzVo4)  
   
 ## 新しいスクリプトのインストール方法  
@@ -88,10 +87,11 @@ __Python Call setting__
 各プログラムの場所を確認  
   
 __YoneoLocr__  
-・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main：Hole alignにyoneoLocrを使用する場合のプログラムの場所。  
+・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main ： Hole alignにyoneoLocrを使用する場合はこの変数progdirにプログラムが参照する場所として指定する。  
 ＊事前にYneoLocrのインストールなどが必要です。これについてはYoneoLockerの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
+[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
   
 
 ### スクリプトについての注意点  
