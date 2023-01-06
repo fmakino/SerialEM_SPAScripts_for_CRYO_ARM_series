@@ -6250,7 +6250,8 @@ ScriptName CustomAutoFocus
         process @= AutoFocus_byOL
         ReportTickTime
         start_ticks = $repVal1
-        Seteucentric
+        SetEucentricFocus
+
         
         ReportTiltAngle curr_angle
         ReportDefocus initial_defocus
