@@ -5980,7 +5980,7 @@ ScriptName CustomAutoFocus
                 SkipAcquiringNavItem
                 Exit
 
-            # Ajdust focus by Z
+            # Adjust focus by Z
             Else
                 Echo ===> Focus is adjusted by stage movement.
 
@@ -6017,6 +6017,8 @@ ScriptName CustomAutoFocus
         process @= AutoFocus_byOL
         ReportTickTime
         start_ticks = $repVal1
+
+        SetEucentricFocus
 
         ReportTiltAngle curr_angle
         ReportDefocus initial_defocus
@@ -6080,7 +6082,7 @@ ScriptName CustomAutoFocus
                 SkipAcquiringNavItem
                 Exit
 
-             # Ajdust focus by Z for large defocus (>= $OLFocusRange microns), only at stage is flat
+             # Adjust focus by Z for large defocus (>= $OLFocusRange microns), only at stage is flat
              ElseIf ( ( $range >= $OLFocusLimit ) AND ( ABS ( $curr_angle ) <= 3 ) )
                 Echo ===> Requires large change.
                 Echo ===> Focus is adjusted by stage movement.
@@ -6102,7 +6104,7 @@ ScriptName CustomAutoFocus
                     Exit
                 EndIf
 
-            # Ajdust focus by OL
+            # Adjust focus by OL
             Else
                 Echo ===> Focus is adjusted by OL.
                 setting_defocus = $setting_defocus + $defocus
