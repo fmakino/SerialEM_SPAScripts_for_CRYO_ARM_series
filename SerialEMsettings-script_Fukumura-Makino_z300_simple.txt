@@ -5902,7 +5902,7 @@ ScriptName Controller
             SaveToOtherFile A JPG NONE $log_dirF\Focus_Item$item_label_Square$map_label_$acq_count.jpg
         EndIf
 
-        If $focus_method == 1 # OR ($group_FLAG == 1) # Z
+        If $focus_method == 1 OR ($group_FLAG == 1) # Z
             ReportTiltAngle curr_angle 
             If ABS ( $curr_angle ) < 3 # If the stage is almost flat (No tilt)
                 CallFunction CustomAutoFocus::AutoFocus_byZ
@@ -6213,7 +6213,7 @@ ScriptName CustomAutoFocus
                 SkipAcquiringNavItem
                 Exit
 
-            # Ajdust focus by Z
+            # Adjust focus by Z
             Else
                 Echo ===> Focus is adjusted by stage movement.
 
@@ -6250,7 +6250,8 @@ ScriptName CustomAutoFocus
         process @= AutoFocus_byOL
         ReportTickTime
         start_ticks = $repVal1
-
+        Seteucentric
+        
         ReportTiltAngle curr_angle
         ReportDefocus initial_defocus
 
