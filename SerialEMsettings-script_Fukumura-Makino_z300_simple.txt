@@ -4321,7 +4321,8 @@ ScriptName Funcs
         SuppressReports
         ReportTargetDefocus 
 
-        If ( $repVal1 > $TD_low ) OR ( $repVal1 < $TD_high )
+        TD = $repVal1 + $delta # added 23Feb06
+        If ( $TD > $TD_low ) OR ( $TD < $TD_high ) # added 23Feb06
             SetTargetDefocus $TD_low
         Else
             IncTargetDefocus $delta
