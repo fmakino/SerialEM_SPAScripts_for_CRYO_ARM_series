@@ -3557,7 +3557,8 @@ ScriptName ZLPAlignByFL
 
         # Stop server
         RunInShell $shiftFL x
-
+        RunInShell $closeWindows 
+        
     EndFunction
 
 ###################################################
@@ -6700,6 +6701,9 @@ ScriptName EMProperties
         Else
             shiftFL @= "$WORKING_DIR_PATH\Tool\FLUpDownApp.exe"
         EndIf
+
+        # Closing dos window command
+        closeWindows @= $WORKING_DIR_PATH\Tool\CloseDosWindow.bat
 
         #====================================================
         # Setting for FindInitVector
