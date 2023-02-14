@@ -28,7 +28,7 @@ Here is a link to a simple manual where you can check the workflow.
 
 大阪大学大学院生命機能研究科で使用しているスクリプト  
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
-[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)     上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
+[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)     上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。   
 Scripts used at Graduate School of Frontier Biosciences, Osaka University
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
 [CRYO ARM 300II](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)   
