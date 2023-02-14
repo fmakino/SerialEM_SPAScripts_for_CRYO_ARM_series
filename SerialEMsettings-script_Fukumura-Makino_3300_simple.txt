@@ -439,9 +439,6 @@ Function Core
         EndIf
         #=========================
 
-        If $koehler_z_offset != 0
-            MoveStageTo 0 0 $koehler_z_offset
-        EndIf
 
         #==== Adjust eucentric height ====
         If $adjust_eucentric == 2
@@ -456,6 +453,14 @@ Function Core
             ReportTiltAngle TT
             Eucentricity 1
             TiltTo $TT
+        ElseIf($adjust_eucentric == 1) AND ($koehler_z_offset != 0)
+            Echo ===> Adjust eucentircity for whole squares
+            Eucentricity 1
+            MoveStage 0 0 $koehler_z_offset
+        ElseIf($adjust_eucentric == 0) AND ($koehler_z_offset != 0)
+            Echo ===> MoveStageTo $koehler_z_offsetfor whole squares
+            Eucentricity 1
+            MoveStage 0 0 $koehler_z_offset
         Else
             Echo ===> Skip adjust eucentircity for whole squares
         EndIf
