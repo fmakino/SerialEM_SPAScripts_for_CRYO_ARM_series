@@ -173,11 +173,11 @@ How to do: After TakeAtlas, select a target from the map and move the stage by a
 parameter: Clapt_before, Clapt_afterの値などをチェック(300はopen, 3300/200は1(150um)がおすすめ)  
 はじめは、shift_squre2view=0としgoto_LowDose=1として、Squareとview間の両倍率のFOVをあわせてどれ程度ずれたかを確認する。この値をproperties(square2view_x, square2view _y)に入れる。shift_squre2view=1とすると次回以降この値が適用されSquareとview間の両倍率の移動が楽になる。  
 How to do：TakeSquare後にマップからターゲットを選びadd pointsおよびgoto xyでステージ移動する。その後viewの倍率に行き(Low Dose Controlをチェック)、ターゲットをその倍率で真ん中に来るようにステージ移動し撮影する。ターゲットをクリックしたあとにshift to makerで両倍率のFOVをあわせてどれ程度ずれたかを確認する。pop upで出てきたこの値をproperties(square2view_x, square2view_y)に入れるとよい。    
-[説明動画](https://youtu.be/6RnbGBvGPgI)
+[説明動画](https://youtu.be/6RnbGBvGPgI)  
 parameter: Check the values of Clapt_before, Clapt_after, etc. (open for 300, 1 (150um) for 3300/200 is recommended)  
 At first, set shift_squre2view=0 and goto_LowDose=1 to check how much the FOV of both magnifications between square and view are shifted together. If shift_squre2view=1, this value will be applied from the next time onward to make it easier to move both magnifications between square and view.  
 How to do: After TakeSquare, select a target from the map and move the stage by add points and goto xy. Then go to view magnification (check Low Dose Control) and stage the target so that it is in the center at that magnification and record. After clicking on the target, use shift to maker to adjust the FOV of both magnifications and check how much the FOV has shifted, and put this value from pop up into properties(square2view_x, square2view_y).  
-[Youtube](https://youtu.be/6RnbGBvGPgI)
+[Youtube](https://youtu.be/6RnbGBvGPgI)  
 
 **3. SPADataCollection_Screening**  
 動作確認のみ。  
@@ -187,7 +187,7 @@ How to do: After TakeSquare, select a target from the map and move the stage by 
   Confirmation of operation only.  
 To make sure the script AutoFocusRoutine works, set the "target defocus" in the Focus menu to -1.4 to -2.0.  
 If you use YoneoLocr's YoneoHole (Yonekura et al. 2021, available from Yonekura et al. 2021) to run the script AlignToHole, set use_YL = 1. At this time, do not forget to activate YoneoHole, and note that use_YL in aligntohole has priority over use_YL.  
-[Youtube](https://youtu.be/VLQfcRfwaqk) 
+[Youtube](https://youtu.be/VLQfcRfwaqk)  
 
 **4.FindVectorsRoutine**  
 動作確認のみ。穴がはっきりと視認できるポジションに移動すること。  
@@ -237,12 +237,12 @@ If it does not work: In most cases, either the height adjustment or AutoFocus is
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
 parameters: search_range = 40 がオススメ  
 もし、うまく動かない場合は'WORKING_DIR_PATH¥Tool'にshift_FL_client.bat/py, shift_FL_server.bat/pyがコピーされていること、また、最新のものであるか確認してください。
-[説明動画](https://youtu.be/9jEgw5Tsib0)
+[説明動画](https://youtu.be/9jEgw5Tsib0)  
 Confirmation of operation.  
 Check that the command prompt appears and that the FLF in TemCenter on the JEOL PC has been changed. Or if the image darkens at least once.  
 parameters: search_range = 40 is recommended  
 If it does not work, make sure that shift_FL_client.bat/py and shift_FL_server.bat/py are copied to 'WORKING_DIR_PATH¥Tool' and that they are up to date.   
-[Youtube](https://youtu.be/9jEgw5Tsib0)
+[Youtube](https://youtu.be/9jEgw5Tsib0)  
 
 
 **7. SPADataCollection**  
