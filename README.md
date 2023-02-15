@@ -10,7 +10,7 @@ If you want to install this script, please try the following procedure. If you a
 
 English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ReadMe_EN.md).
 
-### 日本電子の装置を使用した単粒子解析のデータ収集(SPAデータ収集)の考え方  Concept of data collection for single particle analysis (SPA data collection) using JEOL's CRYO ARMs
+### 日本電子の装置を使用した単粒子解析のデータ収集(SPAデータ収集)の考え方  
 ・日本電子の装置はステージの精度がそれほど高くありません。そのため、SerialEMの従来のやり方では正確に場所をアライメントするために色々な工夫や正確なアライメントを行うための時間が必要になってしまいます。また、LowMagからMagに移行した際のヒステリシスも大きいので頻繁な行き来はお勧めできないのも理由の一つです。
 そこで、正確性を少し犠牲にして速さを追求し、ヒステリシスを考慮したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れだけをここに示します。  
 
