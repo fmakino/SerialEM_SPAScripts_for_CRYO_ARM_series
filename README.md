@@ -8,7 +8,7 @@
 This script is for data collection of single particle analysis on JEOL's CRYO ARM series (200, 300, 300Ⅱ). It is not guaranteed to work with other instruments (F200 or TFS).　　
 If you want to install this script, please try the following procedure. If you are not sure, please consult with an application engineer at JEOL or Dr. Makino (h1839[at]fbs.osaka-u.ac.jp) at Namba Laboratory, Graduate School of Frontier Biosciences, Osaka University.　　
 
-English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ReadMe_EN.md).
+English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/README_EN.md).
 
 ### 日本電子の装置を使用した単粒子解析のデータ収集(SPAデータ収集)の考え方  
 ・日本電子の装置はステージの精度がそれほど高くありません。そのため、SerialEMの従来のやり方では正確に場所をアライメントするために色々な工夫や正確なアライメントを行うための時間が必要になってしまいます。また、LowMagからMagに移行した際のヒステリシスも大きいので頻繁な行き来はお勧めできないのも理由の一つです。
