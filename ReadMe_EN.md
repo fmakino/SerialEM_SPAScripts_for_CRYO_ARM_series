@@ -75,24 +75,28 @@ atlas2square_y = 116.5 # [um].
 
 
 __Setting for Square__  
-・default_SquareMag = 150：squaremapを取得するときの倍率  
-・spot_square = 4：squaremapを取得するときのspot size  
-・brightness_square = 100：100%が多く使われる。ただしenergy filterを入れる場合はその限りではなく、ちょうどよい明るさが存在する。FL focusと合わせて調整するとよい。  
+・default_SquareMag = 150: Magnification when acquiring squaremap  
+・spot_square = 4: Spot size when acquiring squaremap  
+・brightness_square = 100: 100% is often used. It is recommended to adjust it together with FL focus when  you want to insert energy filter.
 ・FOV offset From Square to View  
-        square2view_x = 20 # [um]    
-        square2view_y = 30 # [um]    
-: SquareからViewに移行したときのshift to markerの値、もしアップデートしたい場合はそれらの値に足し算して記述すること  
+square2view_x = 20 # [um].  
+square2view_y = 30 # [um].  
+: Value of shift to marker when moving from Square to View, if you want to update it, add to those values and describe it.  
+  
 
 __Python Call setting__   
-各プログラムの場所を確認  
+・Find out where each program is located    
   
 __YoneoLocr__  
-・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main ： Hole alignにYoneoLocrを使用する場合はこの変数progdirにプログラムが参照する場所として指定する。  
-＊事前にYoneoLocrのインストールなどが必要です。これについてはYoneoLocrの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
+・progdir = C:\Users\VALUEDGATANCUSTOMER\Desktop\yoneoLocr-main : If you use YoneoLocr for hole align, specify this variable progdir as the place where the program refers to.  
+You need to install YoneoLocr in advance. Please refer to YoneoLocr's [website](https://github.com/YonekuraLab/yoneoLocr) for more information about this. Also, please remember to cite it in your papers if you use it.
 
-他にも沢山の値が存在するが必要最低限なものは以上。  
-[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
+There are many other values, but these are the minimum necessary.  
+[Youtube](https://youtu.be/AWCzy14NnQ0)  
   
+
+
+Translated with www.DeepL.com/Translator (free version)
 
 ### Notes on Scripts  
 EMProperties values are not usually changed (FOV offset from Atlas to Square and FOV offset From Square to View are changed about once a week).  
