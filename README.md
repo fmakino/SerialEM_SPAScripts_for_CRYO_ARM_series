@@ -55,7 +55,7 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
 ## 新しいスクリプトのインストール方法  
 新しいスクリプトをダウンロード後、任意の場所にコピー(例：C:¥ProgramData¥SerialEM¥)  
 SerialEM上部のメニューscript --> Load new packageから先程コピーしたスクリプトをロードする。  
-
+[説明動画：インストールについて](https://youtu.be/m1iIJxrMrSQ)  
   
 ### EMProperties の値を確認および入力    
 　もし以前同様のスクリプトを使用していた場合は下記の値をそちらからコピーすると簡単で早い（変数名が変更してある可能性があるので注意が必要である）。  ここでは難波研究室CRYO ARM 300Ⅱでの使用例をのせる。    
@@ -100,7 +100,7 @@ __YoneoLocr__
 ＊事前にYoneoLocrのインストールなどが必要です。これについてはYoneoLocrの[サイト](https://github.com/YonekuraLab/yoneoLocr)を参照してください。また、使用した場合は論文への引用も忘れないようにしてください。
 
 他にも沢山の値が存在するが必要最低限なものは以上。  
-[説明動画：インストールとチェック項目について](https://youtu.be/AWCzy14NnQ0)  
+
   
 
 ### スクリプトについての注意点  
