@@ -114,7 +114,7 @@ __YoneoLocr__
 parameter: Clapt_before, Clapt_afterの値などをチェック(300は0 (open), 3300/200は1(150um))  
 はじめは、shift_atlas2square=0, goto_Square=1として、AtlasとSquare間の両倍率のField Of View (FOV)をあわせてどの程度ずれたかを確認する。この値をproperties(atlas2square_x, atlas2square_y)に入れる。shift_atlas2square=1とすると次回以降この値が適用されAtlasとSquare間の両倍率の移動が楽になる。  
 How to do：TakeAtlas後にマップからターゲットを選びadd pointsおよびgoto xyでステージ移動する。その後Squareの倍率に行き、ターゲットをその倍率で真ん中に来るようにステージ移動し撮影する。ターゲットをクリックしたあとにshift to makerで両倍率のFOVをあわせてどれ程度ずれたかを確認する。pop upで出てきたこの値をproperties(atlas2square_x, atlas2square_y)に入れるとよい。  
-[説明動画](https://youtu.be/rGww73Szdy0)  
+[説明動画](https://youtu.be/DOBqU_4LCY8)
 
   
 **2. TakeSquare**  
