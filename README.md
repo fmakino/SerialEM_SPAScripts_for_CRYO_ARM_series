@@ -170,6 +170,6 @@ parameter: LAYERなどスクリプトparametersで決定する
 byOLとbyZで確認  
 ＊頻繁に変えるものは最初の行に記載してある。  
 
-
+＊TakeAtlasではSerialEM4.0以上で発生するバグ(Montage作成時に2つ目以上の画像取得でエラーになる。回避策としてダミーを作成して対応)に対応しております。
 *Autofocus時のFocus設定に関するバグをfixしました(high:-1.0, Low:-2.0。 step 0.2で-2.2の設定まで行ってしまう） 2023/1/30  
 *ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14　　　　
