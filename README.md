@@ -127,7 +127,7 @@ How to do：TakeSquare後にマップからターゲットを選びadd pointsお
 動作確認のみ。  
 スクリプトAutoFocusRoutine を確実に動かすためにFocusメニュー”target defocus” で-1.4~-2.0にsetすることを忘れずにすること。  
 スクリプトAlignToHoleを動かす際にYoneoLocrのYoneoHole ([Yonekura et al. 2021](https://www.nature.com/articles/s42003-021-02577-1)　[入手先](https://github.com/YonekuraLab/yoneoLocr))を使用する場合にはuse_YL = 1にすること。このとき、YoneoHoleを起動することを忘れずに行うこととaligntohole内のuse_YLの方が優先されるので注意が必要。  
-[説明動画](https://youtu.be/VLQfcRfwaqk)  
+[説明動画](https://youtu.be/SymgfCqZiIg)
 
 **4.FindVectorsRoutine**  
 動作確認のみ。穴がはっきりと視認できるポジションに移動すること。  
