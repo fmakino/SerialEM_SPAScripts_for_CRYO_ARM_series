@@ -49,7 +49,7 @@ shift_FL_client.bat, shift_FL_server.batについてはスクリプトZLPalignBy
 ・デフォルトのホールテンプレート(よく使うホールの大きさで作成しておく)を準備し、C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
 に事前にコピーしておくこと。  
   
-[説明動画：PyJEM関連とhole templateについて](https://youtu.be/PwmvMNkzVo4)  
+[説明動画：PyJEM関連とhole templateについて](https://youtu.be/zP3PCU6qTfY)
 
 
 ## 新しいスクリプトのインストール方法  
