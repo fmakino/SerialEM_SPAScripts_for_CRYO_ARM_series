@@ -24,7 +24,8 @@ English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRY
   
 大阪大学大学院生命機能研究科で使用しているスクリプト  
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
-[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)     上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
+[CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)  
+上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
    
 
 ## 事前準備、用意しておくこと
