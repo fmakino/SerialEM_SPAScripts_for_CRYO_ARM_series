@@ -112,7 +112,7 @@ How to do: After TakeAtlas, select a target from the map and move the stage by a
 parameter: Check the values of Clapt_before, Clapt_after, etc. (open for 300, 1 (150um) for 3300/200 is recommended)  
 At first, set shift_squre2view=0 and goto_LowDose=1 to check how much the FOV of both magnifications between square and view are shifted together. If shift_squre2view=1, this value will be applied from the next time onward to make it easier to move both magnifications between square and view.  
 How to do: After TakeSquare, select a target from the map and move the stage by add points and goto xy. Then go to view magnification (check Low Dose Control) and stage the target so that it is in the center at that magnification and record. After clicking on the target, use shift to maker to adjust the FOV of both magnifications and check how much the FOV has shifted, and put this value from pop up into properties(square2view_x, square2view_y).  
-[Youtube]([https://youtu.be/WwYUhpgNzqQ)  
+[Youtube](https://youtu.be/WwYUhpgNzqQ)  
 
 **3. SPADataCollection_Screening**  
   Confirmation of operation only.  
