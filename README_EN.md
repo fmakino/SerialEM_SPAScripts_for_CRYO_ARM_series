@@ -95,11 +95,6 @@ You need to install YoneoLocr in advance. Please refer to YoneoLocr's [website](
 
 There are many other values, but these are the minimum necessary.  
 
-  
-
-
-Translated with www.DeepL.com/Translator (free version)
-
 ### Notes on Scripts  
 EMProperties values are not usually changed (FOV offset from Atlas to Square and FOV offset From Square to View are changed about once a week).  
 Parameters in the scripts are easily changed depending on the grid and conditions.  
