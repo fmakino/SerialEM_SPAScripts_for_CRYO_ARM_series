@@ -41,12 +41,14 @@ The first OL aperture is set. (Argument 1 is the same as above. Argument 2 is 0 
 
 Prepare a default hole template (created with the size of the frequently used hole) and copy it in advance to C:¥ProgramData¥SerialEM¥Data¥HoleImage¥hole_template.mrc  
 
+[Youtube](https://youtu.be/zP3PCU6qTfY)  
 
 ## How to install new scripts  
 
 After downloading the new script, copy it to the desired location (e.g., C:¥ProgramData¥SerialEM¥)  
 Load the script you just copied from the menu "script --> Load new package" at the top of SerialEM.  
-  
+[Youtube](https://youtu.be/m1iIJxrMrSQ)  
+
 ### Check and input values in EMProperties    
 　If you have used a similar script before, it is easy and fast to copy the following values from that script (note that the variable names may have been changed). Here is an example of use with CRYO ARM 300II at Namba Laboratory.  
    
@@ -92,7 +94,7 @@ __YoneoLocr__
 You need to install YoneoLocr in advance. Please refer to YoneoLocr's [website](https://github.com/YonekuraLab/yoneoLocr) for more information about this. Also, please remember to cite it in your papers if you use it.
 
 There are many other values, but these are the minimum necessary.  
-[Youtube](https://youtu.be/AWCzy14NnQ0)  
+
   
 
 
@@ -108,20 +110,20 @@ Parameters in the scripts are easily changed depending on the grid and condition
   parameter: Check Clapt_before, Clapt_after values, etc. (300 is 0 (open), 3300/200 is 1 (150um))  
 At first, shift_atlas2square=0, goto_Square=1, and check how much the Field Of View (FOV) of both magnifications between Atlas and Square are shifted together. Set shift_atlas2square=1 to apply this value from the next time and make it easier to move both magnifications between Atlas and Square.  
 How to do: After TakeAtlas, select a target from the map and move the stage by add points and goto xy. Then go to Square magnification and move the target to the center of the stage at that magnification and record. After clicking on the target, use shift to maker to adjust the FOV of both magnifications and check how much the FOV has shifted, and put this value from pop up into properties(atlas2square_x, atlas2square_y).  
-[Youtube](https://youtu.be/rGww73Szdy0)  
+[Youtube](https://youtu.be/DOBqU_4LCY8)  
 
   
 **2. TakeSquare**  
 parameter: Check the values of Clapt_before, Clapt_after, etc. (open for 300, 1 (150um) for 3300/200 is recommended)  
 At first, set shift_squre2view=0 and goto_LowDose=1 to check how much the FOV of both magnifications between square and view are shifted together. If shift_squre2view=1, this value will be applied from the next time onward to make it easier to move both magnifications between square and view.  
 How to do: After TakeSquare, select a target from the map and move the stage by add points and goto xy. Then go to view magnification (check Low Dose Control) and stage the target so that it is in the center at that magnification and record. After clicking on the target, use shift to maker to adjust the FOV of both magnifications and check how much the FOV has shifted, and put this value from pop up into properties(square2view_x, square2view_y).  
-[Youtube](https://youtu.be/6RnbGBvGPgI)  
+[Youtube]([https://youtu.be/WwYUhpgNzqQ)  
 
 **3. SPADataCollection_Screening**  
   Confirmation of operation only.  
 To make sure the script AutoFocusRoutine works, set the "target defocus" in the Focus menu to -1.4 to -2.0.  
 If you use YoneoLocr's YoneoHole (Yonekura et al. 2021, available from Yonekura et al. 2021) to run the script AlignToHole, set use_YL = 1. At this time, do not forget to activate YoneoHole, and note that use_YL in aligntohole has priority over use_YL.  
-[Youtube](https://youtu.be/VLQfcRfwaqk)  
+[Youtube](https://youtu.be/SymgfCqZiIg)  
 
 **4.FindVectorsRoutine**  
 
@@ -137,7 +139,7 @@ skip_holeAlign = 1 # 0: No, 1:Yes
 skip_InitVec = 1 # 0: No, 1:Yes  
 skip_checkAccuracy = 1 # 0: No, 1:Yes  
 using_ZbyV = 0 (0 is recommended by default for Keller)  
-[Youtube](https://youtu.be/p5eJ8c1EzUM)  
+[Youtube](https://youtu.be/DkAXpnlukEA)  
 
 
 **5.AligncomaAndStig**  
@@ -145,7 +147,7 @@ using_ZbyV = 0 (0 is recommended by default for Keller)
 settle_time = 10 sec  
 exp_time = 1 (depending on ice thickness, etc.)  
 If it does not work: In most cases, either the height adjustment or AutoFocus is not working properly. In many cases, both can be fixed by calibrating AutoFocus.  
-[Youtube](https://youtu.be/be8YbSjC8J4)  
+[Youtube](https://youtu.be/ngeKlpl55SU)  
 
 
 **6. ZLPalignByFL**  
@@ -153,7 +155,7 @@ Confirmation of operation.
 Check that the command prompt appears and that the FLF in TemCenter on the JEOL PC has been changed. Or if the image darkens at least once.  
 parameters: search_range = 40 is recommended  
 If it does not work, make sure that shift_FL_client.bat/py and shift_FL_server.bat/py are copied to 'WORKING_DIR_PATH¥Tool' and that they are up to date.   
-[Youtube](https://youtu.be/9jEgw5Tsib0)  
+[Youtube](https://youtu.be/wCDgW2M3zrE)  
 
 
 **7. SPADataCollection**  
