@@ -156,7 +156,7 @@ exp_time = 1(氷の厚さなどによる)
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
 parameters: search_range = 40 がオススメ  
 もし、うまく動かない場合は'WORKING_DIR_PATH¥Tool'にshift_FL_client.bat/py, shift_FL_server.bat/pyがコピーされていること、また、最新のものであるか確認してください。
-[説明動画](https://youtu.be/9jEgw5Tsib0)  
+[説明動画](https://youtu.be/wCDgW2M3zrE)
 
 
 **7. SPADataCollection**  
