@@ -150,13 +150,7 @@ using_ZbyV = 0 (ケラーの場合はデフォルトで0がおすすめ)
 settle_time = 10 sec  
 exp_time = 1(氷の厚さなどによる)  
 もし、うまく動かない場合：高さ調整かAutoFocusがうまく行ってない場合が多い。どちらも、AutoFocusのキャリブレーションで直る場合が多い。  
-[説明動画](https://youtu.be/be8YbSjC8J4)  
-  Confirmation of operation only.  
-settle_time = 10 sec  
-exp_time = 1 (depending on ice thickness, etc.)  
-If it does not work: In most cases, either the height adjustment or AutoFocus is not working properly. In many cases, both can be fixed by calibrating AutoFocus.  
-[Youtube](https://youtu.be/be8YbSjC8J4)  
-
+[説明動画](https://youtu.be/ngeKlpl55SU)
 
 **6. ZLPalignByFL**  
 動作確認。コマンドプロンプトが現れることと、JEOL PCのTemCenterのFLFが変更していあるかどうかを確認。または画像が一度でも暗くなると良い。  
