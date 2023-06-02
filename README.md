@@ -5,6 +5,8 @@
 ## 前置き  introduction
 このスクリプトはJEOL製CRYO ARMシリーズ(200,300,300Ⅱ)の単粒子解析用データ収集用です。他の装置(F200やTFS社製)での動作は保証できません。  
 このスクリプトをインストールしたい場合は以下の手順を試してみてください。もし、わからない場合は日本電子のアプリケーションエンジニアか大阪大学大学院生命機能研究科 難波研究室 牧野(h1839[at]fbs.osaka-u.ac.jp)に相談してみてください。  
+*更新は下に記載しています。
+
 This script is for data collection of single particle analysis on JEOL's CRYO ARM series (200, 300, 300Ⅱ). It is not guaranteed to work with other instruments (F200 or TFS).　　
 If you want to install this script, please try the following procedure. If you are not sure, please consult with an application engineer at JEOL or Dr. Makino (h1839[at]fbs.osaka-u.ac.jp) at Namba Laboratory, Graduate School of Frontier Biosciences, Osaka University.　　
 
