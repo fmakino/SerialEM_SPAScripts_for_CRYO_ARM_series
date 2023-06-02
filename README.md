@@ -176,5 +176,5 @@ call C:\ProgramData\Miniconda3\Scripts\activate.bat
 call activate vjem38
 
 start python C:\ProgramData\SerialEM\PyTool\shift_FL_server.py
-```　　
+```
 ＊ CRYO ARM 200用のスクリプト　"SerialEMsettings-script_Fukumura-Makino_z200_simple.txt"をアップロードしました。yoneohole起動時の動作のみ異なります。 2023/6/2　　
