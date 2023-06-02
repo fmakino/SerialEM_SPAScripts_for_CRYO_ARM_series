@@ -171,10 +171,10 @@ byOLとbyZで確認
 *Autofocus時のFocus設定に関するバグをfixしました(high:-1.0, Low:-2.0。 step 0.2で-2.2の設定まで行ってしまう） 2023/1/30  
 *ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14　　　　
 ＊ shift_FL_server.bat の中でshift_FL_server.pyを呼び出す際にstartをつけてbackground処理するようにしてください。そうしないと２回目以降のFL focusの自動調整時に止まることがあります。 2023/6/2
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+```bash
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
 call activate vjem38
 
 start python C:\ProgramData\SerialEM\PyTool\shift_FL_server.py
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+```
 ＊ CRYO ARM 200用のスクリプト　"SerialEMsettings-script_Fukumura-Makino_z200_simple.txt"をアップロードしました。yoneohole起動時の動作のみ異なります。 2023/6/2
