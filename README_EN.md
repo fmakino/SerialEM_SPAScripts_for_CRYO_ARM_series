@@ -160,5 +160,11 @@ Check byOL and byZ
 
 LogImage setting, save_R should be 0. If this is not included, the speed of acquisition will be slow.
 
-*Autofocus時のFocus設定に関するバグをfixしました(high:-1.0, Low:-2.0。 step 0.2で-2.2の設定まで行ってしまう） 2023/1/30
-*ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14
+*Fixed a bug related to the Focus setting in Autofocus (high:-1.0, low:-2.0. step 0.2 would go up to -2.2 setting) 2023/1/30
+*Fixed a bug that adjust eucentric is not reflected when TakeSquare is performed with Keller mode selected. 2/14/2023
+
+*Add script ReadVectors_Recordmode.
+This is used to move the value of hole vecotr in RefineVectors to serialEM buildin multi hole shooting.
+Specifically, the hole vecotr after RefineVectors is read into SetRegularHoleVectors.
+At this time, do not forget to change the parameters to use_multiR=2 2024/4/4　　
+
