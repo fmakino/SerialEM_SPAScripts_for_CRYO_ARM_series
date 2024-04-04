@@ -172,12 +172,6 @@ byOLとbyZで確認
 *ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14  
 ＊shift_FL_server.bat の中でshift_FL_server.pyを呼び出す際にstartをつけてbackground処理するようにしてください(下記は例です)。そうしないと２回目以降のFL focusの自動調整時に止まることがあります。 2023/6/2　　
 
-スクリプト ReadVectors_Recordmode の追加。
-これはRefineVectorsのhole vecotrの値をserialEM buildinのmulti hole 撮影を動かすために使用する。
-具体的にはRefineVectors後のhole vecotrをSetRegularHoleVectorsに読み込ませる。
-この際、parametersのuse_multiR=2に変更することを忘れないこと 2024/4/4　　
-
-![image](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/assets/34903373/b2e17a18-ab03-47f2-b816-fd72a17f974a)
 
 ```bash　　
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
@@ -186,3 +180,8 @@ call activate vjem38
 start python C:\ProgramData\SerialEM\PyTool\shift_FL_server.py
 ```
 ＊ CRYO ARM 200用のスクリプト　"SerialEMsettings-script_Fukumura-Makino_z200_simple.txt"をアップロードしました。yoneohole起動時の動作のみ異なります。 2023/6/2　　
+
+*スクリプト ReadVectors_Recordmode の追加。
+これはRefineVectorsのhole vecotrの値をserialEM buildinのmulti hole 撮影を動かすために使用する。
+具体的にはRefineVectors後のhole vecotrをSetRegularHoleVectorsに読み込ませる。
+この際、parametersのuse_multiR=2に変更することを忘れないこと 2024/4/4　　
