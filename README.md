@@ -171,6 +171,14 @@ byOLとbyZで確認
 *Autofocus時のFocus設定に関するバグをfixしました(high:-1.0, Low:-2.0。 step 0.2で-2.2の設定まで行ってしまう） 2023/1/30  
 *ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14  
 ＊shift_FL_server.bat の中でshift_FL_server.pyを呼び出す際にstartをつけてbackground処理するようにしてください(下記は例です)。そうしないと２回目以降のFL focusの自動調整時に止まることがあります。 2023/6/2　　
+
+スクリプト ReadVectors_Recordmode の追加。
+これはRefineVectorsのhole vecotrの値をserialEM buildinのmulti hole 撮影を動かすために使用する。
+具体的にはRefineVectors後のhole vecotrをSetRegularHoleVectorsに読み込ませる。
+この際、parametersのuse_multiR=2に変更することを忘れないこと 2024/4/4　　
+
+![image](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/assets/34903373/b2e17a18-ab03-47f2-b816-fd72a17f974a)
+
 ```bash　　
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
 call activate vjem38
