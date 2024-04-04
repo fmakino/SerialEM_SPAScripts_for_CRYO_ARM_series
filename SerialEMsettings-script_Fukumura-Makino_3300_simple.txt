@@ -3203,8 +3203,8 @@ CallFunction SPADataCollection::Core $workflowType
 
             Echo ===> Phase Plate moved $PP_moved times
 
-        Else
-            PP_moved := 0
+        #Else
+        #    PP_moved := 0
         EndIf
 
     EndFunction
