@@ -6766,6 +6766,19 @@ ScriptName EMProperties
 EndMacro
 Macro	43
 
+ScriptName ReadVectors_Recordmode
+
+SuppressReports 
+CallFunction EMProperties::LoadAdditionalProperties
+
+ReadTextFile IS $NAVIGATOR_PATHVectors_RecordMode_IS.txt
+
+SetLowDoseMode 1
+GoToLowDoseArea R
+ReportMagIndex magID
+
+SetRegularHoleVectors $IS[1] $IS[2] $IS[3] $IS[4]  $magID
+
 EndMacro
 Macro	60
 MoveStage 0 0 -15
