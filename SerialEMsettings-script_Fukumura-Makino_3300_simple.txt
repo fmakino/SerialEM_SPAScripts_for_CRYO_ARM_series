@@ -5196,12 +5196,6 @@ Function AquireMultiHoles 0 0
             ny = $IS_array[$idx2]
             ImageShiftByMicrons $nx $ny 0 $BTtoIS
 
-            If $stop_display_R == 1    
-              CallFunction Funcs::CustomEarlyReturnNextShot 0
-            Else
-              CallFunction Funcs::CustomEarlyReturnNextShot $DisplayReturn
-            Endif
-           
             ########## Function from AquireHole ##########
             AreDewarsFilling
             If $repVal1 >= 1
