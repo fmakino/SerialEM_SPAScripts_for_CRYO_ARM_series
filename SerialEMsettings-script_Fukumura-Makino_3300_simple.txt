@@ -453,11 +453,11 @@ Function Core
             ReportTiltAngle TT
             Eucentricity 1
             TiltTo $TT
-        ElseIf($adjust_eucentric == 1) AND ($koehler_z_offset != 0)
+        ElseIf ($adjust_eucentric == 1) AND ($koehler_z_offset != 0)
             Echo ===> Adjust eucentircity for whole squares
             Eucentricity 1
             MoveStage 0 0 $koehler_z_offset
-        ElseIf($adjust_eucentric == 0) AND ($koehler_z_offset != 0)
+        ElseIf ($adjust_eucentric == 0) AND ($koehler_z_offset != 0)
             Echo ===> MoveStageTo $koehler_z_offsetfor whole squares
             Eucentricity 1
             MoveStage 0 0 $koehler_z_offset
