@@ -34,7 +34,6 @@ PyJEMを使わないバージョン
 
 このとき、CL apertureが2段の場合はProperty fileに "JeolHasExtraApertures 1"を追加すること。EMPropertiesのCLapt_typeの値は、0は上段のCL aperture, 1は下段のCL aperture (SetApertureSizeのコマンドと同様の動き)となる。
 また、ZLPAlignByFLは "RefineZLP 0 1"に変更した。  
-
 ```bash　　
 ScriptName EMProperties
 
@@ -45,6 +44,26 @@ ScriptName EMProperties
 CLapt_type = 1
 
 ```
+BatchでGlobal Map (Atlas map)を実行できるスクリプトを別途追加しました (4.1の最新以上)。
+
+[Global Atlas](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple_withoutPyJEM.txt)    
+
+TakeAtlasを呼び出すため、上記のスクリプトに追加する形で実装してください。　　
+【使い方】  POSITIONS_TO_MONTAGEにBatchでGlobal Mapを取得したいCartridgeのIDを記述する。もし、存在しないID番号があればスキップします。
+```bash　　
+# ---------------------------------------------------------------------
+# Position 0 - on the column
+# Positions 1-12 -> storage
+# Montage_All set to 1 to auto-determine sample IDs and montage all of them
+# or set to 0 and fill in the Positions_to_montage matrix with at least 2 numbers.
+POSITIONS_TO_MONTAGE = { 888 889 } #input IDs keep space after number. e.g. {### }
+# ---------------------------------------------------------------------
+
+```
+
+
+
+
 
 CLapt_type = 1
 BatchGlobalMap (BatchAltas)
