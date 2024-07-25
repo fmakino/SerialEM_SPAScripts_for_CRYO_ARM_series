@@ -6388,7 +6388,7 @@ ScriptName FindVectorsRough
 
    # Set CLapt_before
    #RunInShell $setCLapt $CLapt_type $CLapt_before
-   SetApertureSize 2 $CLapt_before
+   SetApertureSize $CLapt_type $CLapt_before
    
    # Z by V with target Z offset and magnification
    GoToLowDoseArea V
@@ -6500,7 +6500,7 @@ ScriptName FindVectorsRough
    SetEucentricFocus
    ResetDefocus  
    # RunInShell $setCLapt $CLapt_type $CLapt_after
-   SetApertureSize 2 $CLapt_after
+   SetApertureSize $CLapt_type $CLapt_after
 
    OKBox Finished. Correct CL apterture position at Record mode.
 
