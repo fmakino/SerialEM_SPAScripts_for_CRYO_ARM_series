@@ -53,7 +53,8 @@ BatchGlobalMap (BatchAltas)
 ・SerialEMのキャリブレーションとインストール(ver4以上)が完了していること  
   
 ・Focus/Tuneメニュー  Drift Protection にチェックが入っていること  
-    
+
+＊PyJEMを使わないスクリプトを使用する場合は以下の３つは不要です。
 ・PyJEMプログラム群のSetCLaperture.bat/py, SetOLaperture.bat/py, shift_FL_client.bat/py, shift_FL_server.bat/pyをスクリプト40: EMproperties内に書いてある  WORKING_DIR_PATH のフォルダ+Tool(DefaultのWORKING_DIR_PATHはC:\ProgramData\SerialEM, つまりC:\ProgramData\SerialEM\Tool)に入れること  
   
 ・上記のPyJEMプログラム群の入手とPyJEMのインストールについては近くの日本電子のエンジニア等にご相談下さい。
