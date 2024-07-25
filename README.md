@@ -53,7 +53,7 @@ BatchGlobalMap (BatchAltas)
    
 
 ## 事前準備、用意しておくこと
-・SerialEMのキャリブレーションとインストール(ver4以上)が完了していること  
+・SerialEMのキャリブレーションとインストール(ver4.1以上 推奨)が完了していること  
   
 ・Focus/Tuneメニュー  Drift Protection にチェックが入っていること  
 
