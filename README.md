@@ -14,7 +14,7 @@ English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRY
 
 ### 日本電子の装置を使用した単粒子解析のデータ収集(SPAデータ収集)の考え方  
 ・日本電子の装置はステージの精度がそれほど高くありません。そのため、SerialEMの従来のやり方では正確に場所をアライメントするために色々な工夫や正確なアライメントを行うための時間が必要になってしまいます。また、LowMagからMagに移行した際のヒステリシスも大きいので頻繁な行き来はお勧めできないのも理由の一つです。
-そこで、正確性を少し犠牲にして速さを追求し、ヒステリシスを考慮したのが、私たちが提供するスクリプトです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れだけをここに示します。  
+そこで、正確性を少し犠牲にして速さを追求し、ヒステリシスを考慮したのが、私たちが提供するスクリプトです。これはOsaka Frameworkと呼ばれるものです。数スクエアのスクリーニングが30-60分、その後データ収集に+30-60分が目標です。大まかな流れだけをここに示します。  
 
 ここで注意が必要なのは一度Magに移行してからはなるべくLowMagに行かないようにすることです。どうしても必要な場合は再度ビームのアライメント調整が必要です。　
 
@@ -27,6 +27,10 @@ English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRY
 大阪大学大学院生命機能研究科で使用しているスクリプト  
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
 [CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)  
+PyJEMを使わないバージョン
+
+BatchGlobalMap
+
 上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
    
 
@@ -167,11 +171,11 @@ parameter: LAYERなどスクリプトparametersで決定する
 byOLとbyZで確認  
 ＊頻繁に変えるものは最初の行に記載してある。  
 
-＊TakeAtlasではSerialEM4.0以上で発生するバグ(Montage作成時に2つ目以上の画像取得でエラーになる。回避策としてダミーを作成して対応)に対応しております。
+＊TakeAtlasではSerialEM4.0以上で発生するバグ(Montage作成時に2つ目以上の画像取得でエラーになる。回避策としてダミーを作成して対応)に対応しております。 <-- 2024/07/24 SerialEM 4.1 stableからバグ修正を確認してます
 *Autofocus時のFocus設定に関するバグをfixしました(high:-1.0, Low:-2.0。 step 0.2で-2.2の設定まで行ってしまう） 2023/1/30  
 *ケラーモードを選んでTakeSquareした場合にadjust eucentricが反映されないバグをfixしました。 2023/2/14  
 ＊shift_FL_server.bat の中でshift_FL_server.pyを呼び出す際にstartをつけてbackground処理するようにしてください(下記は例です)。そうしないと２回目以降のFL focusの自動調整時に止まることがあります。 2023/6/2　　
-
+＊PyJEMを使わないバージョン(without PyJEM)とBatchGlobalMapをアップロードしました。 2024/7/25
 
 ```bash　　
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
