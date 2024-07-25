@@ -28,8 +28,21 @@ English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRY
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
 [CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)  
 PyJEMを使わないバージョン
+このとき、CL apertureが2段の場合はProperty fileに "JeolHasExtraApertures 1"を追加すること。EMPropertiesのCLapt_typeの値は、0は上段のCL aperture, 1は下段のCL aperture (SetApertureSizeのコマンドと同様の動き)となる。
 
-BatchGlobalMap
+```bash　　
+ScriptName EMProperties
+
+
+# CL aperture
+# 1: CryoARM200, CryoARM200CA, CryoARM300II, F200
+# 0 or 1: Two CL aperture of first gen CryoARM300, 0 is 1st, 1 is 2nd CL aperture.
+CLapt_type = 1
+
+```
+
+CLapt_type = 1
+BatchGlobalMap (BatchAltas)
 
 上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
    
