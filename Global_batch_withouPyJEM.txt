@@ -1,0 +1,151 @@
+ScriptName Batch_Atlas
+
+# =============================================================
+# This script automatically creates low magnification maps of cryo-grids
+# on JEOL CryoARM microscopes.
+# ----------------------------------------------------------------------------------------------------------
+# Written by Bart Marzec [bart@jeoluk.com] / last update: 01 Nov 2021
+# Modified by FM Jul 24 2024, without PyJEM
+# Modified by FM Apr 12 2022
+# Modified by TF Jun 3 2022
+# ----------------------------------------------------------------------------------------------------------
+# The script requires GridSwapper to work correctly.
+# =============================================================
+
+# ============================
+# Parameters
+# ============================
+
+# ---------------------------------------------------------------------
+# Position 0 - on the column
+# Positions 1-12 -> storage
+# Montage_All set to 1 to auto-determine sample IDs and montage all of them
+# or set to 0 and fill in the Positions_to_montage matrix with at least 2 numbers.
+POSITIONS_TO_MONTAGE = { 1775 1790 } #input IDs keep space after number. e.g. {### }
+# ---------------------------------------------------------------------
+
+piece_X = -1 #-1
+piece_Y = -1 #-1
+
+exp_time = 1 # [sec]
+spot_atlas = -1 # Spot Size for Atlas
+CLapt_before = 1 # CLapt for Atlas. 0: Remove, 1: No.1, 2: No.2, 3:No.3, 4:No.4
+CLapt_after = 1 # CLapt after taking atlas for Square. 0: Remove, 1: No.1, 2: No.2, 3:No.3, 4:No.4
+
+# ===========================
+# Advanced setting parameters
+# ===========================
+# Set initial BeamShift before taking atlas?
+setBSforAtlas = 0 # 0:No, 1:Yes
+
+# Set initial BeamShift after taking atlas?
+setBSforSquare = 0 # 0:No, 1:Yes
+
+# Apply fixed shift to marker value from Atlas to Squaer after taking Atlas?
+shift_atlas2square = 1 # 0:No, 1:Yes
+
+# GoTo Square mag after taking each montage?
+goto_Square = 0 # 0:No, 1:Yes, 2: Show dialog box
+
+# GoTo Square mag after taking "all" montages?
+goto_SquareAtLast = 1 # 0:No, 1
+
+# Show up Parent directory on dialog box
+setDirectory_show = 1 # 0:No --> use directory path setted in set_diretory, 1:Yes --> Show dialog box
+set_directory = X:\data
+
+# ============================
+# Main
+# ============================
+
+SuppressReports 
+CallFunction EMProperties::LoadAdditionalProperties
+
+If $hasLN2Tank == 0
+    Echo ===> This script does not support this scope.
+    Exit
+EndIf
+
+# Create Master Directory
+Echo Set master directory for Batch_Atlas
+If $setDirectory_show == 1
+   UserSetDirectory
+   ReportDirectory 
+   PARENT_DIRECTORY = $repVal1
+Else  
+   PARENT_DIRECTORY = $set_directory
+Endif 
+
+NewArray IDs 0 1
+IDs = $POSITIONS_TO_MONTAGE
+
+# List up cartridge IDs
+Echo Sample IDs that will be montaged are as follows:
+Loop $#IDs index
+    Echo $IDs[$index]
+EndLoop
+
+# Loop TakeAtlas
+Loop $#IDs index
+    Echo Montaging grid with the ID of $IDs[$index]...
+    Echo Swapping grids... Please wait.
+    #Echo $gridswapper $IDs[$index] 
+    #RunInShell $gridswapper $IDs[$index] 
+    swapped = 1 
+    LongOperation In 
+    Try 
+       FindCartridgeWithID $IDs[$index] 
+       getIDif = $repVal1
+    Catch 
+       echo No Cartridge ID $IDs[$index] 
+       getIDif = 0
+       
+    EndTry 
+
+    If $getIDif  > 0
+       LoadCartridge $getIDif
+       swapped = 0
+    Else
+       Echo !!!!!!!!!!!!!!!!!! No Cartridge ID $IDs[$index]  and skip it !!!!!!!!!!!!!!!!!!!
+       Continue 
+    Endif 
+
+    If $swapped == 0
+        session_dir = $PARENT_DIRECTORY\$IDs[$index]
+        MakeDirectory $session_dir
+        Delay 1 sec
+        
+        batchProcess = 1
+        CallFunction TakeAtlas::Core $exp_time $spot_atlas $CLapt_before $CLapt_after $setBSforAtlas $setBSforSquare $shift_atlas2square $goto_Square $batchProcess 
+
+        SaveNavigator 
+        CloseNavigator 
+        CloseFile
+
+    #Else
+        #Echo Grids were not swapped. Please investigate.
+        #Pause TransferCartrige error. Please investigate.
+    EndIf 
+    Delay 5 sec
+EndLoop 
+
+Echo All montages have been acquired.
+#SetColumnOrGunValve 0
+
+# ========= GoTo Square =========
+If $goto_SquareAtLast == 2
+    YesNoBox Go to Square mag?
+    #0:No, 1:yes
+    If $repVal1 == 1 
+       goto_SquareAtLast = 1
+    Endif 
+Endif 
+
+If $goto_SquareAtLast == 1
+    #SetMag $default_SquareMag
+    #CallFunction Funcs::SetSquareIllumination $CLapt_after
+    Call CallSquareMag
+EndIf
+
+#set beam blanking after take square
+SetBeamBlank 1
