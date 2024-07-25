@@ -64,10 +64,6 @@ POSITIONS_TO_MONTAGE = { 888 889 } #input IDs keep space after number. e.g. {###
 
 
 
-
-CLapt_type = 1
-BatchGlobalMap (BatchAltas)
-
 上記リンクからではなく、codeからzipをダウンロードしてtextファイルとしてダウンロードしてください。 
    
 
