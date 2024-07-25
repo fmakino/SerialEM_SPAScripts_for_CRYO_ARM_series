@@ -27,12 +27,13 @@ English version is [here](https://github.com/fmakino/SerialEM_SPAScripts_for_CRY
 大阪大学大学院生命機能研究科で使用しているスクリプト  
 [CRYO ARM 300](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple.txt)  
 [CRYO ARM 300Ⅱ](https://github.com/fmakino/SPAscripts-using-SerialEM-for-CRYOARMseries/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple.txt)  
-PyJEMを使わないバージョン
-このとき、CL apertureが2段の場合はProperty fileに "JeolHasExtraApertures 1"を追加すること。EMPropertiesのCLapt_typeの値は、0は上段のCL aperture, 1は下段のCL aperture (SetApertureSizeのコマンドと同様の動き)となる。
-また、ZLPAlignByFLは "RefineZLP 0 1"に変更した。
-[CRYO ARM 300]()
-[CRYO ARM 300Ⅱ](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple_withoutPyJEM.txt)
 
+PyJEMを使わないバージョン  
+[CRYO ARM 300](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple_withoutPyJEM.txt)    
+[CRYO ARM 300Ⅱ](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple_withoutPyJEM.txt)  
+
+このとき、CL apertureが2段の場合はProperty fileに "JeolHasExtraApertures 1"を追加すること。EMPropertiesのCLapt_typeの値は、0は上段のCL aperture, 1は下段のCL aperture (SetApertureSizeのコマンドと同様の動き)となる。
+また、ZLPAlignByFLは "RefineZLP 0 1"に変更した。  
 
 ```bash　　
 ScriptName EMProperties
