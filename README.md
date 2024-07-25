@@ -46,10 +46,10 @@ CLapt_type = 1
 ```
 BatchでGlobal Map (Atlas map)を実行できるスクリプトを別途追加しました (4.1の最新以上)。
 
-[Global Atlas](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_z300_simple_withoutPyJEM.txt)    
+[Global Atlas](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/Global_batch_withouPyJEM.txt)  
 
-TakeAtlasを呼び出すため、上記のスクリプトに追加する形で実装してください。　　
-【使い方】  POSITIONS_TO_MONTAGEにBatchでGlobal Mapを取得したいCartridgeのIDを記述する。もし、存在しないID番号があればスキップします。
+TakeAtlasを呼び出すため、上記のスクリプトに追加する形で実装してください。   
+【使い方】  POSITIONS_TO_MONTAGEにBatchでGlobal Mapを取得したいCartridgeのIDを記述する。もし、存在しないID番号があればスキップします。　　
 ```bash　　
 # ---------------------------------------------------------------------
 # Position 0 - on the column
