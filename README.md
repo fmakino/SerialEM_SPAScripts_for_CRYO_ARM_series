@@ -44,7 +44,7 @@ ScriptName EMProperties
 CLapt_type = 1
 
 ```
-BatchでGlobal Map (Atlas map)を実行できるスクリプトを別途追加しました (4.1の最新以上)。
+BatchでGlobal Map (Atlas map)を実行できるスクリプトを別途追加しました (4.1の最新以上)。この際プロパティファイルにJeolHasNitrogenClassを2に設定しておく必要があります。TemExternalのバージョンについては現在調査中です。  
 
 [Global Map](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/Global_batch_withouPyJEM.txt)  
 
