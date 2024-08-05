@@ -5,11 +5,11 @@ ScriptName Batch_Atlas
 # on JEOL CryoARM microscopes.
 # ----------------------------------------------------------------------------------------------------------
 # Written by Bart Marzec [bart@jeoluk.com] / last update: 01 Nov 2021
-# Modified by FM Jul 24 2024, without PyJEM
+# Modified by FM Jul 24 2024, without PyJEM, gridswapper
 # Modified by FM Apr 12 2022
 # Modified by TF Jun 3 2022
 # ----------------------------------------------------------------------------------------------------------
-# The script requires GridSwapper to work correctly.
+# 
 # =============================================================
 
 # ============================
@@ -89,8 +89,6 @@ EndLoop
 Loop $#IDs index
     Echo Montaging grid with the ID of $IDs[$index]...
     Echo Swapping grids... Please wait.
-    #Echo $gridswapper $IDs[$index] 
-    #RunInShell $gridswapper $IDs[$index] 
     swapped = 1 
     LongOperation In 
     Try 
@@ -121,16 +119,11 @@ Loop $#IDs index
         SaveNavigator 
         CloseNavigator 
         CloseFile
-
-    #Else
-        #Echo Grids were not swapped. Please investigate.
-        #Pause TransferCartrige error. Please investigate.
     EndIf 
     Delay 5 sec
 EndLoop 
 
 Echo All montages have been acquired.
-#SetColumnOrGunValve 0
 
 # ========= GoTo Square =========
 If $goto_SquareAtLast == 2
@@ -143,8 +136,8 @@ Endif
 
 If $goto_SquareAtLast == 1
     #SetMag $default_SquareMag
-    #CallFunction Funcs::SetSquareIllumination $CLapt_after
-    Call CallSquareMag
+    CallFunction Funcs::SetSquareIllumination $CLapt_after
+    #Call CallSquareMag
 EndIf
 
 #set beam blanking after take square
