@@ -33,7 +33,7 @@ PyJEMを使わないバージョン
 [CRYO ARM 300Ⅱ](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/SerialEMsettings-script_Fukumura-Makino_3300_simple_withoutPyJEM.txt)  
 
 このとき、CL apertureが2段の場合はProperty fileに "JeolHasExtraApertures 1"を追加すること。EMPropertiesのCLapt_typeの値は、0は上段のCL aperture, 1は下段のCL aperture (SetApertureSizeのコマンドと同様の動き)となる。
-また、ZLPAlignByFLは "RefineZLP 0 1"に変更した。  これがうまくいかない場合はコチラを参考にしてScript "ZLPAlignByFL"を変更すると良い[ZLP_readme.md](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ZLP_readme.md)。
+また、ZLPAlignByFLは "RefineZLP 0 1"に変更した。  これがうまくいかない場合はコチラを参考にしてScript "ZLPAlignByFL"を変更すると良い[ZLP_readme.md](https://github.com/fmakino/SerialEM_SPAScripts_for_CRYO_ARM_series/blob/main/ZLP_readme.md)
 ```bash　　
 ScriptName EMProperties
 
